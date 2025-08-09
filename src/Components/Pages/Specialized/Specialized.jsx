@@ -2,47 +2,48 @@ import React from 'react';
 
 const Specialized = () => {
     return (
-       <div className="bg-white text-gray-800 font-sans p-8">
+       <div className="bg-white text-gray-800  p-8">
       {/* Header Section */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          <span className="text-green-500">At Software Chamber,</span> we specialize in
-        </h1>
-        <h2 className="text-3xl md:text-4xl text-gray-500">
-          turning complex challenges into elegant digital solutions
-        </h2>
+    <h1 className="text-4xl md:text-6xl font-bold mb-4 w-7xl text-center">
+  
+    <span>
+     ✨ At Software Chamber,<span className='text-gray-400'> we specialize</span> in turning complex challenges into elegant <span className='text-gray-400'> digital solutions</span> 
+    </span>
+ 
+</h1>
       </div>
 
       {/* Main Content Section */}
-      <div className="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
+      <div className="flex flex-col md:flex-row items-center md:items-start  space-y-8 md:space-y-0 md:space-x-12">
         {/* Left Stats Section */}
-        <div className="flex-1 space-y-8">
+        <div className=" space-y-8 ]">
           <div>
             <h3 className="text-5xl font-bold">20+</h3>
-            <p className="text-gray-600">Tech Partners</p>
+            <p className="text-gray-600 text-2xl">Tech Partners</p>
           </div>
           <div>
             <h3 className="text-5xl font-bold">150+</h3>
-            <p className="text-gray-600">Project Completed</p>
+            <p className="text-gray-600 text-2xl ">Project Completed</p>
           </div>
           <div>
             <h3 className="text-5xl font-bold">1K+</h3>
-            <p className="text-gray-600">Satisfied Customers</p>
+            <p className="text-gray-600 text-2xl">Satisfied Customers</p>
           </div>
         </div>
 
         {/* Center Image Section */}
-        <div className="flex-1 w-full md:w-auto">
+        <div className="flex  w-full md:w-auto">
           {/* Replace with your image */}
-          <img
+          <img 
             src="/AllPicture/Rectangle 6.png"
             alt="Team at Software Chamber"
-            className="rounded-xl shadow-lg"
+            className="w-96 h-96 rounded-xl shadow-lg"
           />
         </div>
 
         {/* Right Features Section */}
-        <div className="flex-1 space-y-6">
+        <div className=" space-y-6">
           <FeatureItem
             number="1"
             title="Your Team in the cloud"
@@ -76,8 +77,8 @@ const FeatureItem = ({ number, title, description }) => {
         {number}
       </div>
       <div>
-        <h4 className="font-semibold text-lg">{title}</h4>
-        <p className="text-sm text-gray-600">{description}</p>
+        <h4 className="font-semibold text-2xl">{title}</h4>
+        <p className="text-xl text-gray-600">{description}</p>
       </div>
     </div>
     );

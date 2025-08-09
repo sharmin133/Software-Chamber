@@ -1,60 +1,69 @@
 import React from 'react';
+import { FaSpotify, FaDropbox, FaSlack, FaAmazon, FaUserTie } from 'react-icons/fa';
 
 const StackPower = () => {
+  const buttonColor = "#2CCEBA";
+
   return (
-    <div className="bg-white px-6 py-16 md:py-24">
+    <div className="bg-black px-6 py-16 md:py-24">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
-        
+
         {/* Left Title */}
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-snug md:w-1/2">
-          Our Stack Powers of the World’s Most Beloved Companies
+        <h2 className="text-3xl md:text-5xl font-bold  leading-snug md:w-1/2">
+          Our Stack Powers of the  <span className='text-gray-400'>World’s</span> Most <span className='text-gray-400'>Beloved Companies</span>
         </h2>
 
-        {/* Right Buttons */}
-        <div className=" flex flex-col gap-4">
-          <button className=" py-3 bg-green-500 text-white rounded-full font-medium hover:bg-green-600 ">
+        {/* Right Buttons Grid */}
+        <div className="grid grid-cols-2 gap-6 md:w-1/2">
+          {/* First row */}
+          <button
+            className="flex items-end gap-3 rounded-full font-medium px-5 py-3"
+            style={{ backgroundColor: buttonColor, color: 'white' }}
+          >
+            <FaSpotify size={20} color="#1DB954" /> {/* Spotify green */}
             Spotify
           </button>
-          <button className="px-5 py-3 bg-blue-500 text-white rounded-full font-medium hover:bg-blue-600 transition">
+          <button
+            className="flex items-center gap-3 rounded-full font-medium px-5 py-3"
+            style={{ backgroundColor: buttonColor, color: 'white' }}
+          >
+            <FaDropbox size={20} color="#0061FF" /> {/* Dropbox blue */}
             Dropbox
           </button>
-          <button className="px-5 py-3 bg-purple-500 text-white rounded-full font-medium hover:bg-purple-600 transition">
+
+          {/* Second row */}
+          <button
+            className="flex items-start gap-3 rounded-full font-medium px-5 py-3"
+            style={{ backgroundColor: buttonColor, color: 'white' }}
+          >
+            <FaSlack size={20} color="#4A154B" /> {/* Slack purple */}
             Slack
           </button>
-          <button className="px-5 py-3 bg-yellow-500 text-black rounded-full font-medium hover:bg-yellow-600 transition">
+          <button
+            className="flex items-center gap-3 rounded-full font-medium px-5 py-3"
+            style={{ backgroundColor: buttonColor, color: 'white' }}
+          >
+            <FaAmazon size={20} color="#FF9900" /> {/* Amazon orange for Flipkart */}
             Flipkart
           </button>
-          <button className="px-5 py-3 bg-pink-500 text-white rounded-full font-medium hover:bg-pink-600 transition">
+
+          {/* Third row - single button */}
+          <button
+            className="flex items-center gap-3 rounded-full font-medium px-5 py-3 justify-center col-span-2 md:col-span-1 md:justify-start"
+            style={{
+              backgroundColor: buttonColor,
+              color: 'white',
+              marginLeft: '20%',  // off-center for little "aloomelo" effect
+            }}
+          >
+            <FaUserTie size={20} color="#E91E63" /> {/* Pink for TalentQl */}
             TalentQl
           </button>
         </div>
       </div>
-
-
-
-
-     
-  <div className="bg-amber-200  rounded-3xl shadow-xl px-8 py-12 max-w-4xl w-full text-center">
-    {/* Top Badge */}
-    <p className="inline-block bg-green-100 text-green-600 font-semibold px-4 py-1 rounded-full mb-4">
-      Smarter Idea, instant solutions
-    </p>
-
-    {/* Heading */}
-    <h2 className="text-3xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
-      Uncover the Design and Development Projects That Set Us Apart
-    </h2>
-
-    {/* Button */}
-    <button className="mt-4 px-6 py-3 bg-green-600 text-white rounded-full text-lg font-medium hover:bg-green-700 transition">
-      Contact Us
-    </button>
-  </div>
-
-
-
     </div>
   );
 };
 
 export default StackPower;
+

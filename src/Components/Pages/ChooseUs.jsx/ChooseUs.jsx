@@ -6,8 +6,7 @@ const ChooseUs = () => {
       {/* Header Section */}
       <div className="text-center mb-12 md:mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          Why Choose <br />
-          Softwarechamber
+          Why Choose  Softwarechamber
         </h1>
         <p className="text-gray-500 max-w-2xl mx-auto">
           Deliver personalized experiences to your customers with AI-powered recommendation engines and dynamic content generation.

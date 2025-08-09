@@ -22,7 +22,7 @@ const BannerContent = () => {
           <div className="flex gap-16">
 
             {/* Left Buttons Container */}
-<div className="flex flex-col justify-between items-end gap-4 mr-6 relative">
+<div className="flex flex-col justify-around items-end gap-4 mr-6 relative">
   <button className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white text-sm font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300 w-[240px] relative z-20">
     <FaCheckCircle className="text-green-400" />
     Website Development
@@ -69,9 +69,10 @@ const BannerContent = () => {
 
   </button>
 </div>
-            
+         <div className='flex gap-2'>
+             
             {/* Left Card (Timeline) */}
-            <div className="relative w-[350px] rounded-3xl bg-gradient-to-tr from-[#102b3f] via-[#103a4d] to-[#153042] p-8 backdrop-blur-lg border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+            <div className="relative w-[400px] rounded-3xl bg-gradient-to-r from-[#22C1AD]/0 via-[#22C1AD]/50 to-[#22C1AD]/0 p-8 backdrop-blur-lg border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
               
               {/* Months */}
               <div className="flex justify-between text-gray-300 text-sm font-medium mb-6">
@@ -82,10 +83,10 @@ const BannerContent = () => {
 
               {/* Vertical Lines with Circles */}
               <div className="absolute left-0 right-0 top-[73px] bottom-0 flex justify-around px-6 pointer-events-none">
-                {[...Array(6)].map((_, i) => (
+                {[...Array(9)].map((_, i) => (
                   <div key={i} className="flex flex-col items-center">
                     {/* Circle at top of line */}
-                    <span className="w-2 h-2 rounded-full bg-white/40 shadow-[0_0_6px_rgba(255,255,255,0.6)] mb-2"></span>
+                    <span className="w-2 h-2 rounded-full bg-white/50 shadow-[0_0_6px_rgba(255,255,255,0.6)] mb-2"></span>
                     {/* Line */}
                     <span className="w-[1px] flex-1 bg-white/10"></span>
                   </div>
@@ -94,28 +95,28 @@ const BannerContent = () => {
 
               {/* Bars */}
               <div className="relative flex flex-col gap-6 mt-8">
-                <div className="w-[70%] px-4 py-2 rounded-lg bg-[#1e293b]/80 border border-white/20 text-white text-sm shadow-lg">
-                  Mobile app
+                <div className="w-[70%] px-4 py-2 rounded-lg bg-[#1e293b]/60 border border-white/20 text-white text-sm shadow-lg">
+                  <button className='p-2 bg-[#1e293b]/20 rounded-xl '>Mobile app</button>
                 </div>
-                <div className="w-[60%] px-4 py-2 rounded-lg bg-gradient-to-r from-[#3bb1d3] to-[#2a819c] border border-white/20 text-white text-sm shadow-lg">
-                  Software
+                <div className="w-[60%] ml-auto px-4 py-2 rounded-lg bg-gradient-to-r from-[#3bb1d3] to-[#2a819c] border border-white/20 text-white text-sm shadow-lg">
+                 <button className='p-2  px-4 rounded-xl bg-white/20 '> Software</button>
                 </div>
                 <div className="w-[80%] px-4 py-2 rounded-lg bg-gradient-to-r from-[#3b9bd3] to-[#4dd37a] border border-white/20 text-white text-sm shadow-lg">
-                  Website
+                  <button className='p-2  px-4 rounded-xl bg-white/20 '> Website</button>
                 </div>
               </div>
             </div>
 
             {/* Right Card (Description) */}
-            <div className="flex flex-col justify-between rounded-3xl p-10 w-[350px] backdrop-blur-lg ">
+            <div className="flex flex-col justify-between rounded-xl p-10 w-[350px] backdrop-blur-lg ">
               
               <div>
 
-                <h2 className="text-white font-bold text-2xl mb-2">
+                <h2 className="text-white font-bold text-3xl mb-2">
                   Software Service Solutions
                 </h2>
                 
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 text-xl leading-relaxed">
                   Plan, track, and manage projects with precision tools.
                 </p>
               </div>
@@ -125,7 +126,9 @@ const BannerContent = () => {
               <button className="mt-6 px-6 py-2 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300">
                 Discover
               </button>
-               <span className="absolute  -right-22 w-20 h-8 -translate-y-1/2">
+
+
+               <span className="absolute bottom-50 -right-22 w-20 h-8 -translate-y-1/2">
  <svg
   viewBox="0 0 80 32"
   fill="none"
@@ -145,7 +148,7 @@ const BannerContent = () => {
 
 
 
-<span className="absolute -bottom-5 -right-22 w-20 h-8 -translate-y-1/2">
+<span className="absolute bottom-8 -right-22 w-20 h-8 -translate-y-1/2">
  <svg
   viewBox="0 0 80 32"
   fill="none"
@@ -162,12 +165,14 @@ const BannerContent = () => {
   />
 </svg>
 </span>
+         </div>
+              
             </div>
 
             
             
             {/* Right Buttons Container */}
-            <div className="flex flex-col justify-between items-start gap-4 ml-6">
+            <div className="flex flex-col justify-around items-start gap-4 ml-6">
               
                 <button className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white text-sm font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300 w-[240px]">
                     <FaCheckCircle className="text-green-400" />
