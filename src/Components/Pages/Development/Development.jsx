@@ -1,81 +1,153 @@
-import React from 'react';
-// import './SoftwareDevelopmentProcess.css'; // We'll create this file for the circular layout
-
-const globeImage = 'https://i.imgur.com/your-globe-image-here.png'; // Replace with a real image URL or local path
+import React from "react";
+import { FaStar } from "react-icons/fa";
 
 const Development = () => {
+  const steps = [
+    { id: 1, label: "Code" },
+    { id: 2, label: "Build" },
+    { id: 3, label: "Test" },
+    { id: 4, label: "Release" },
+    { id: 5, label: "Deploy" },
+    { id: 6, label: "Monitor" },
+    { id: 7, label: "Build" },
+  ];
+
+  // geometry for arc placement (matching the example layout)
+  const arc = {
+    width: 800,
+    height: 380,
+    centerX: 400,
+    centerY: 320,
+    radius: 300,
+  };
+
   return (
-    <div className="bg-[#f0f9ff] text-gray-800 font-sans py-16 md:py-24 overflow-hidden">
-      {/* Small Badge */}
-      <div className="flex justify-center mb-6">
-        <span className="bg-green-700 text-white text-xs font-semibold px-3 py-1 rounded-full flex items-center space-x-1">
-          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          </svg>
-          <span>Smarter idea, instant solutions</span>
-        </span>
+    <div className="relative flex flex-col items-center text-center bg-black text-white overflow-hidden pt-12 pb-28">
+      {/* soft green radial glow */}
+      <div className="absolute -top-36 left-1/2 -translate-x-1/2 w-[1100px] h-[1100px] rounded-full blur-[160px] bg-gradient-to-r from-emerald-400/30 via-teal-400/25 to-cyan-400/15 pointer-events-none" />
+
+      {/* small tag */}
+      <div className="z-10 mt-6 inline-flex items-center gap-2 bg-black/60 px-4 py-1 rounded-full border border-white/10">
+        <FaStar className="text-sm text-emerald-300" />
+        <span className="text-sm text-gray-100">Smarter Idea, instant solutions</span>
       </div>
 
-      {/* Header Text */}
-      <div className="text-center mb-16 px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
-          Our Software <br className="md:hidden" /> Development Process
-        </h1>
-        <p className="text-gray-500 max-w-2xl mx-auto">
-          Deliver personalized experiences to your customers with AI-powered recommendation engines and dynamic content generation.
-        </p>
+      {/* headings */}
+      <h2 className="z-10 mt-6 text-4xl md:text-5xl font-extrabold">
+        <span className="text-white">Our </span>
+        <span className="text-emerald-300">Software</span>
+      </h2>
+      <h2 className="z-10 -mt-1 text-4xl md:text-5xl font-extrabold text-emerald-200/70">
+        Development Process
+      </h2>
+
+      <p className="z-10 mt-4 max-w-xl text-gray-400 px-6">
+        Deliver personalized experiences to your customers with AI-powered
+        recommendation engines and dynamic content generation.
+      </p>
+
+      {/* contact button (daisyUI) */}
+      <div className="z-10 mt-6">
+        <button className="btn btn-neutral btn-md rounded-full px-6">Contact Us</button>
       </div>
 
-      {/* CTA Button */}
-      <div className="flex justify-center mb-16">
-        <button className="bg-gray-800 text-white rounded-full px-6 py-3 flex items-center space-x-2 transition-transform hover:scale-105">
-          <span>Contact Us</span>
-          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M11 3a1 1 0 100 2h3.586l-4.293 4.293a1 1 0 001.414 1.414L16 6.414V10a1 1 0 102 0V3a1 1 0 00-1-1h-7z"></path>
-            <path d="M4 11a1 1 0 100 2h1a1 1 0 100-2H4zm-1 4a1 1 0 100 2h1a1 1 0 100-2H3zm5-4a1 1 0 100 2h1a1 1 0 100-2H8zm-1 4a1 1 0 100 2h1a1 1 0 100-2H7zm5-4a1 1 0 100 2h1a1 1 0 100-2h-1zm-1 4a1 1 0 100 2h1a1 1 0 100-2h-1zm-3-4a1 1 0 100 2h1a1 1 0 100-2h-1zm-1 4a1 1 0 100 2h1a1 1 0 100-2H7z"></path>
-          </svg>
-        </button>
-      </div>
+      {/* arc + globe container */}
+      <div className="relative mt-14 w-full max-w-[900px] h-[420px]">
+        {/* dotted curved path */}
+        <svg
+          viewBox={`0 0 ${arc.width} ${arc.height}`}
+          className="absolute inset-0 w-full h-full"
+          preserveAspectRatio="none"
+          aria-hidden
+        >
+          {/* main dashed arc */}
+          <path
+            d={`M40,${arc.height - 40} Q${arc.centerX},-120 ${arc.width - 40},${arc.height - 40}`}
+            stroke="rgba(255,255,255,0.18)"
+            strokeWidth="2"
+            strokeDasharray="6 8"
+            fill="none"
+          />
+          {/* dotted accent (slightly above) */}
+          <path
+            d={`M70,${arc.height - 60} Q${arc.centerX},-80 ${arc.width - 70},${arc.height - 60}`}
+            stroke="rgba(56,189,248,0.6)"
+            strokeWidth="6"
+            strokeLinecap="round"
+            strokeDasharray="1 22"
+            fill="none"
+            opacity="0.25"
+          />
+        </svg>
 
-      {/* Process Visualization Section */}
-      <div className="relative w-full max-w-5xl mx-auto flex justify-center mt-12 md:mt-24">
-        {/* The Globe Image */}
-        <img
-          src={globeImage}
-          alt="Globe"
-          className="w-full md:w-3/4 max-w-2xl animate-pulse-slow"
-        />
+        {/* step nodes placed along the arc */}
+        {steps.map((step, i) => {
+          // distribute from 0..pi (left -> right along a semi-circle-ish curve)
+          const t = i / (steps.length - 1); // 0..1
+          const angle = Math.PI * t; // 0..π
+          const x = arc.centerX + arc.radius * Math.cos(angle);
+          const y = arc.centerY - arc.radius * Math.sin(angle);
 
-        {/* Process Steps */}
-        <div className="process-steps">
-          {/* Use CSS positioning for each step */}
-          <div className="step step-1">
-            <span className="step-number">1</span>
-            <span className="step-label">Code</span>
-          </div>
-          <div className="step step-2">
-            <span className="step-number">2</span>
-            <span className="step-label">Build</span>
-          </div>
-          <div className="step step-3">
-            <span className="step-number">3</span>
-            <span className="step-label">Test</span>
-          </div>
-          <div className="step step-4">
-            <span className="step-number">4</span>
-            <span className="step-label">Release</span>
-          </div>
-          <div className="step step-5">
-            <span className="step-number">5</span>
-            <span className="step-label">Deploy</span>
-          </div>
-          <div className="step step-6">
-            <span className="step-number">6</span>
-            <span className="step-label">Monitor</span>
-          </div>
-          <div className="step step-7">
-            <span className="step-number">7</span>
-            <span className="step-label">Build</span>
+          // small rotation so labels face outward slightly
+          const rotateDeg = (t - 0.5) * -35;
+
+          return (
+            <div
+              key={step.id}
+              className="absolute flex flex-col items-center w-max -translate-x-1/2 -translate-y-1/2"
+              style={{
+                left: `${(x / arc.width) * 100}%`,
+                top: `${(y / arc.height) * 100}%`,
+                transform: `translate(-50%, -50%) rotate(${rotateDeg}deg)`,
+              }}
+            >
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-800/80 border border-white/10 flex items-center justify-center text-sm md:text-base font-semibold">
+                {step.id}
+              </div>
+
+              <span
+                className="mt-2 text-xs md:text-sm font-medium text-emerald-300 whitespace-nowrap"
+                style={{ transform: `rotate(${ -rotateDeg }deg)` }} // un-rotate the label text
+              >
+                {step.label}
+              </span>
+            </div>
+          );
+        })}
+
+        {/* globe / circle at bottom center */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2"
+          style={{ top: `${(arc.centerY + 40) / arc.height * 100}%` }}
+        >
+          <div className="relative w-[340px] h-[340px] rounded-full bg-gradient-to-b from-emerald-900/80 to-slate-900/80 border border-emerald-600/30 overflow-hidden">
+            {/* dotted globe pattern (simple stylistic representation) */}
+            <svg viewBox="0 0 300 300" className="w-full h-full opacity-60">
+              <defs>
+                <linearGradient id="g" x1="0" x2="1">
+                  <stop offset="0%" stopColor="#6EE7B7" stopOpacity="0.06" />
+                  <stop offset="100%" stopColor="#38BDF8" stopOpacity="0.06" />
+                </linearGradient>
+              </defs>
+
+              <circle cx="150" cy="150" r="140" fill="url(#g)" />
+
+              {/* a few dotted patterns to mimic world dots */}
+              <g fill="rgba(255,255,255,0.06)">
+                <circle cx="105" cy="110" r="2" />
+                <circle cx="115" cy="128" r="1.8" />
+                <circle cx="130" cy="100" r="1.6" />
+                <circle cx="160" cy="140" r="1.8" />
+                <circle cx="190" cy="100" r="2" />
+                <circle cx="200" cy="150" r="1.6" />
+                <circle cx="140" cy="180" r="1.8" />
+                <circle cx="100" cy="170" r="1.5" />
+                <circle cx="180" cy="190" r="1.7" />
+              </g>
+            </svg>
+
+            {/* subtle inner glow */}
+            <div className="absolute inset-0 rounded-full shadow-[inset_0_40px_80px rgba(16,185,129,0.06)] pointer-events-none" />
           </div>
         </div>
       </div>

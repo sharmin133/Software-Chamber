@@ -1,9 +1,9 @@
 import React from "react";
-// import BannerContent from "./BannerContent";
+import BannerContent from "./BannerContent";
 
 const Banner = () => {
   return (
-    <section className="bg-[#0E0E17] text-white px-4 md:px-12 pt-20 pb-28 relative overflow-hidden">
+    <section className=" text-white px-4 md:px-12 pt-20 pb-28 relative overflow-hidden">
       {/* Tagline */}
       <div className="text-center mb-4">
         <span className="inline-block bg-[#1f1f2e] text-cyan-400 text-xs px-4 py-1 rounded-full">
@@ -26,7 +26,7 @@ const Banner = () => {
         </button>
       </div>
 
-     {/* <BannerContent></BannerContent> */}
+<div className="flex items-center justify-center"> <BannerContent></BannerContent> </div>
       
     </section>
   );

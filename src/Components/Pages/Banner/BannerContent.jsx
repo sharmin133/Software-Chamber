@@ -1,71 +1,188 @@
-// src/components/Dashboard.js
-
 import React from 'react';
-
-
+import { FaCheckCircle } from 'react-icons/fa'; // Assuming you have react-icons installed
 
 const BannerContent = () => {
   return (
-  <div className="relative w-[500px] h-[500px] bg-gradient-to-br from-green-200 via-pink-200 to-blue-200 overflow-hidden flex items-center justify-center p-4">
+    <div className="relative w-full h-[500px] overflow-hidden flex items-center justify-center p-4">
 
-  {/* Layer 1 (bottom-most) */}
-  <div className="absolute top-35 left-15 w-[350px] h-[350px] rounded-[40px] bg-white/10 backdrop-blur-md shadow-2xl border border-white/30 z-10" />
+      {/* Layer 1 (bottom-most) - Centered, but slightly offset vertically */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[35%] w-[700px] h-[350px] rounded-[40px] bg-white/10 backdrop-blur-md shadow-2xl border border-white/30 z-10" />
 
-  {/* Layer 2 (middle) */}
-  <div className="absolute top-20 left-12 w-[370px] h-[370px] rounded-[40px] bg-white/10 backdrop-blur-md shadow-2xl border border-white/30 z-20" />
+      {/* Layer 2 (middle) - Centered, but slightly offset vertically */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[740px] h-[370px] rounded-[40px] bg-white/10 backdrop-blur-md shadow-2xl border border-white/30 z-20" />
 
-  {/* Layer 3 (top-most) */}
-  <div className="absolute top-5 left-10 w-[390px] h-[390px] rounded-[40px] bg-white/10 backdrop-blur-md shadow-2xl border border-white/30 z-30" />
+      {/* Layer 3 (top-most) - Centered, but slightly offset vertically */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[55%] w-[780px] h-[390px] rounded-[40px] bg-white/10 backdrop-blur-md shadow-2xl border border-white/30 z-30" />
 
-  {/* Fourth Layer (Content) - This is the main part with the text and timeline */}
-  <div className="absolute top-0 left-0 w-full h-full p-8 flex items-center justify-center z-40 text-white font-sans">
-    <div className="relative w-full h-full p-4">
-      {/* Content grid */}
-      <div className="grid grid-cols-2 gap-4 items-stretch h-full">
-        
-        {/* Left section - Timeline and Cards */}
-        <div className="flex flex-col space-y-2 h-full">
-          <div className="flex justify-between items-center text-gray-400 font-bold mb-2">
-            <span className="text-sm">Aug</span>
-            <span className="text-sm">Sep</span>
-            <span className="text-sm">Oct</span>
+      {/* Fourth Layer (Content) - This is the main part with the text and timeline, also centered */}
+      <div className="absolute top-0 left-0 w-full h-full p-8 flex items-center justify-center z-40 text-white font-sans">
+        <div className="relative w-full h-full p-4 flex items-center justify-center">
+          
+          {/* Main Container */}
+          <div className="flex gap-16">
+
+            {/* Left Buttons Container */}
+<div className="flex flex-col justify-between items-end gap-4 mr-6 relative">
+  <button className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white text-sm font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300 w-[240px] relative z-20">
+    <FaCheckCircle className="text-green-400" />
+    Website Development
+    {/* Connector line from this button */}
+    <span className="absolute top-1/2 -right-20 w-20 h-8 -translate-y-1/2">
+ <svg
+  viewBox="0 0 80 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-full h-full"
+>
+  <path
+    d="M80 4 H30 L10 28 H0"
+    stroke="rgba(255,255,255,0.5)"
+    strokeWidth="2"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+</span>
+  </button>
+  <button className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white text-sm font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300 w-[240px] relative z-20">
+    <FaCheckCircle className="text-green-400" />
+    Mobile App Development
+    {/* Connector line from this button */}
+   <span className="absolute top-1/2 -right-20 w-20 h-8 -translate-y-1/2">
+ <svg
+  viewBox="0 0 80 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-full h-full"
+>
+  <path
+    d="M80 4 H30 L10 28 H0"
+    stroke="rgba(255,255,255,0.5)"
+    strokeWidth="2"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+</span>
+
+  </button>
+</div>
+            
+            {/* Left Card (Timeline) */}
+            <div className="relative w-[350px] rounded-3xl bg-gradient-to-tr from-[#102b3f] via-[#103a4d] to-[#153042] p-8 backdrop-blur-lg border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+              
+              {/* Months */}
+              <div className="flex justify-between text-gray-300 text-sm font-medium mb-6">
+                <span>Aug</span>
+                <span>Sep</span>
+                <span>Oct</span>
+              </div>
+
+              {/* Vertical Lines with Circles */}
+              <div className="absolute left-0 right-0 top-[73px] bottom-0 flex justify-around px-6 pointer-events-none">
+                {[...Array(6)].map((_, i) => (
+                  <div key={i} className="flex flex-col items-center">
+                    {/* Circle at top of line */}
+                    <span className="w-2 h-2 rounded-full bg-white/40 shadow-[0_0_6px_rgba(255,255,255,0.6)] mb-2"></span>
+                    {/* Line */}
+                    <span className="w-[1px] flex-1 bg-white/10"></span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Bars */}
+              <div className="relative flex flex-col gap-6 mt-8">
+                <div className="w-[70%] px-4 py-2 rounded-lg bg-[#1e293b]/80 border border-white/20 text-white text-sm shadow-lg">
+                  Mobile app
+                </div>
+                <div className="w-[60%] px-4 py-2 rounded-lg bg-gradient-to-r from-[#3bb1d3] to-[#2a819c] border border-white/20 text-white text-sm shadow-lg">
+                  Software
+                </div>
+                <div className="w-[80%] px-4 py-2 rounded-lg bg-gradient-to-r from-[#3b9bd3] to-[#4dd37a] border border-white/20 text-white text-sm shadow-lg">
+                  Website
+                </div>
+              </div>
+            </div>
+
+            {/* Right Card (Description) */}
+            <div className="flex flex-col justify-between rounded-3xl p-10 w-[350px] backdrop-blur-lg ">
+              
+              <div>
+
+                <h2 className="text-white font-bold text-2xl mb-2">
+                  Software Service Solutions
+                </h2>
+                
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Plan, track, and manage projects with precision tools.
+                </p>
+              </div>
+              
+
+              
+              <button className="mt-6 px-6 py-2 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300">
+                Discover
+              </button>
+               <span className="absolute  -right-22 w-20 h-8 -translate-y-1/2">
+ <svg
+  viewBox="0 0 80 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-full h-full"
+>
+  <path
+    d="M80 4 H30 L10 28 H0"
+    stroke="rgba(255,255,255,0.5)"
+    strokeWidth="2"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+</span>
+
+
+
+<span className="absolute -bottom-5 -right-22 w-20 h-8 -translate-y-1/2">
+ <svg
+  viewBox="0 0 80 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-full h-full"
+>
+  <path
+    d="M80 4 H30 L10 28 H0"
+    stroke="rgba(255,255,255,0.5)"
+    strokeWidth="2"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+</span>
+            </div>
+
+            
+            
+            {/* Right Buttons Container */}
+            <div className="flex flex-col justify-between items-start gap-4 ml-6">
+              
+                <button className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white text-sm font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300 w-[240px]">
+                    <FaCheckCircle className="text-green-400" />
+                    UI/UX Engineering
+                </button>
+                <button className="flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-b from-[#1e293b] to-[#0f172a] border border-white/10 text-white text-sm font-medium shadow-inner hover:shadow-lg hover:scale-105 transition-transform duration-300 w-[240px]">
+                    <FaCheckCircle className="text-green-400" />
+                    Software Services
+                </button>
+            </div>
           </div>
-
-          {/* Timeline boxes with gradient colors */}
-          <div className="space-y-2 flex-1">
-            <div className="bg-[#2a304e] p-2 rounded-lg text-gray-200 text-sm">Mobile app</div>
-            <div className="bg-gradient-to-r from-[#4a5585] to-[#6074aa] p-2 rounded-lg shadow-md border border-blue-400 text-white text-sm cursor-pointer">Software</div>
-            <div className="bg-gradient-to-r from-[#327788] to-[#429d91] p-2 rounded-lg text-white text-sm cursor-pointer">Website</div>
-          </div>
-        </div>
-
-        {/* Right section - Main Description Card */}
-        <div className="flex flex-col justify-between h-full">
-          <div className="flex flex-col">
-            <h3 className="text-base md:text-lg font-bold text-gray-100 mb-1">Software Service Solutions</h3>
-            <p className="text-gray-400 text-xs leading-relaxed">
-              Plan, track, and manage projects with precision tools.
-            </p>
-          </div>
-          <button className="self-start mt-4 px-4 py-2 text-xs font-semibold text-white bg-gray-700 rounded-full hover:bg-gray-600 transition-colors duration-300">
-            Discover
-          </button>
         </div>
       </div>
+      
     </div>
-  </div>
-
-</div>
-      
-    //   <div className="relative z-40 max-w-xl w-full bg-white/20 backdrop-blur-lg border border-white/30 rounded-3xl shadow-xl px-10 py-12 text-center text-white">
-    //     <h2 className="text-3xl md:text-4xl font-bold mb-4 drop-shadow">Plan Your Project</h2>
-    //     <p className="text-base md:text-lg mb-6 drop-shadow">
-    //       Organize and manage your tasks efficiently using our modern timeline interface.
-    //     </p>
-    //     <button className="mt-2 px-6 py-2 rounded-full bg-purple-500/70 hover:bg-purple-600 transition-colors text-white font-semibold shadow-lg">
-    //       Get Started
-    //     </button>
-      
   );
 };
 

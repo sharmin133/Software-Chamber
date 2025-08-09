@@ -9,14 +9,17 @@ import FAQSection from '../FAQSection/FAQSection';
 import ClientStory from '../ClientStory/ClientStory';
 import ContactUs from '../ContactUs/ContactUs';
 
+
+
 const Home = () => {
     return (
         <div>
-
-            <Banner></Banner>
+           
+            <Banner></Banner> 
+            
             <Specialized></Specialized>
             <Services></Services>
-            {/* <Development></Development> */}
+             <Development></Development> 
             <ChooseUs></ChooseUs>
             <StackPower></StackPower>
             <FAQSection></FAQSection>
