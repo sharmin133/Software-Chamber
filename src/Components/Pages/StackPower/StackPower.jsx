@@ -31,6 +31,8 @@ const StackPower = () => {
             Dropbox
           </button>
 
+          
+
           {/* Second row */}
           <button
             className="flex items-start gap-3 rounded-full font-medium px-5 py-3"
@@ -53,10 +55,10 @@ const StackPower = () => {
             style={{
               backgroundColor: buttonColor,
               color: 'white',
-              marginLeft: '20%',  // off-center for little "aloomelo" effect
+              marginLeft: '20%',  
             }}
           >
-            <FaUserTie size={20} color="#E91E63" /> {/* Pink for TalentQl */}
+            <FaUserTie size={20} color="#E91E63" /> 
             TalentQl
           </button>
         </div>
