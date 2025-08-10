@@ -1,22 +1,37 @@
-import React from 'react';
-import { IoArrowForwardOutline } from 'react-icons/io5';
+import React, { useEffect } from "react";
+import { IoArrowForwardOutline } from "react-icons/io5";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ContactUs = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
     <div className="bg-white min-h-screen p-8 md:p-16">
       {/* Header Section */}
-      <div className="text-center mb-12 md:mb-16">
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gray-900">
-          Let’s talk about your next <br />
-          <span className="text-gray-500">project. We’re here to help.</span>
+      <div
+        className="text-center mb-12 md:mb-16"
+        data-aos="fade-up"
+      >
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+          Let’s talk about your next project.
+          <br />
+          <span className="text-gray-500"> We’re here to help.</span>
         </h1>
-        <p className="mt-4 text-gray-600 text-lg max-w-xl mx-auto">
-          Deliver personalized experiences to your customers with AI-powered recommendation engines and dynamic content generation.
+        <p className="mt-4 text-black text-2xl max-w-3xl mx-auto">
+          Deliver personalized experiences to your customers with AI-powered
+          recommendation engines and dynamic content generation.
         </p>
       </div>
 
       {/* Main Content: Image and Form */}
-      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 max-w-6xl mx-auto bg-white rounded-lg shadow-xl p-8">
+      <div
+        className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-12 max-w-6xl mx-auto bg-white rounded-lg shadow-xl p-8"
+        data-aos="fade-up"
+        data-aos-delay="150"
+      >
         {/* Left Side: Image */}
         <div className="w-full lg:w-1/2">
           <img

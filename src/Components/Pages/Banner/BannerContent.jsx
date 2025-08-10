@@ -72,7 +72,7 @@ const BannerContent = () => {
          <div className='flex gap-2'>
              
             {/* Left Card (Timeline) */}
-            <div className="relative w-[400px] rounded-3xl bg-gradient-to-r from-[#22C1AD]/0 via-[#22C1AD]/50 to-[#22C1AD]/0 p-8 backdrop-blur-lg border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
+            <div className="relative w-[400px] rounded-3xl bg-gradient-to-r from-[#22C1AD]/0 via-[#22C1AD]/50 to-[#22C1AD]/0 p-8 px-12 backdrop-blur-lg border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.5)]">
               
               {/* Months */}
               <div className="flex justify-between text-gray-300 text-sm font-medium mb-6">

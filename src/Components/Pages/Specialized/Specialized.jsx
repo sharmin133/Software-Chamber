@@ -1,23 +1,30 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Specialized = () => {
-    return (
-       <div className="bg-white text-gray-800  p-8">
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  return (
+    <div className="bg-white text-gray-800 p-8">
       {/* Header Section */}
-      <div className="text-center mb-16">
-    <h1 className="text-4xl md:text-6xl font-bold mb-4 w-7xl text-center">
-  
-    <span>
-     ✨ At Software Chamber,<span className='text-gray-400'> we specialize</span> in turning complex challenges into elegant <span className='text-gray-400'> digital solutions</span> 
-    </span>
- 
-</h1>
+      <div className="text-center mb-16" data-aos="fade-down">
+        <h1 className="text-5xl font-bold mb-4 text-center">
+          <span>
+            ✨ At Software Chamber,
+            <span className="text-gray-400"> we specialize</span> in turning
+            complex challenges into elegant{" "}
+            <span className="text-gray-400"> digital solutions</span>
+          </span>
+        </h1>
       </div>
 
       {/* Main Content Section */}
-      <div className="flex flex-col md:flex-row items-center md:items-start  space-y-8 md:space-y-0 md:space-x-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 space-y-8 md:space-y-0 md:space-x-12">
         {/* Left Stats Section */}
-        <div className=" space-y-8 ]">
+        <div className="pl-12 space-y-12" data-aos="fade-right" data-aos-delay="100">
           <div>
             <h3 className="text-5xl font-bold">20+</h3>
             <p className="text-gray-600 text-2xl">Tech Partners</p>
@@ -33,9 +40,8 @@ const Specialized = () => {
         </div>
 
         {/* Center Image Section */}
-        <div className="flex  w-full md:w-auto">
-          {/* Replace with your image */}
-          <img 
+        <div className="flex justify-center" data-aos="zoom-in" data-aos-delay="200">
+          <img
             src="/AllPicture/Rectangle 6.png"
             alt="Team at Software Chamber"
             className="w-96 h-96 rounded-xl shadow-lg"
@@ -43,7 +49,7 @@ const Specialized = () => {
         </div>
 
         {/* Right Features Section */}
-        <div className=" space-y-6">
+        <div className="space-y-6" data-aos="fade-left" data-aos-delay="300">
           <FeatureItem
             number="1"
             title="Your Team in the cloud"
@@ -81,7 +87,7 @@ const FeatureItem = ({ number, title, description }) => {
         <p className="text-xl text-gray-600">{description}</p>
       </div>
     </div>
-    );
+  );
 };
 
 export default Specialized;

@@ -1,44 +1,71 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import { PiStarThin } from "react-icons/pi";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ClientStory = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
-    <section className="bg-white py-20 px-6">
-      {/* Section Title */}
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <span className="inline-block bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-          Smarter idea, instant solutions
+    <div
+      className="bg-gradient-to-t from-[#22C1AD]/10 to-[#1E1E1E] py-20 px-6"
+      data-aos="fade-up"
+    >
+      <div className="text-center mb-4" data-aos="fade-up" data-aos-delay="100">
+        <span className="inline-block bg-gradient-to-r from-[#35354f] to-[#1f1f2e] text-cyan-400 text-xs px-2 py-2 rounded-full border border-blue-400">
+          <p className="flex gap-3 justify-center items-center">
+            <span>
+              <PiStarThin fill="yellow" />
+            </span>{" "}
+            <span>Smarter idea, instant solutions</span>
+          </p>
         </span>
-        <h2 className="text-3xl md:text-5xl font-bold text-black leading-tight">
-          Don't just take our word for it. <br />
-          Hear what our clients say
+      </div>
+
+      <div
+        className="text-center max-w-3xl mx-auto mb-12"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+          Don’t just take our word for it. Hear what{" "}
+          <span className="text-gray-200">our clients say </span>
         </h2>
       </div>
 
       {/* Testimonial Card */}
-      <div className="bg-gray-100 rounded-xl p-8 max-w-3xl mx-auto shadow-md">
-        <p className="text-lg text-gray-700 italic mb-6">
-          "Sed sit varius neque turpis enim ut metus consectetur. Tortor urna risus phasellus nec. In facilisis pulvinar sagittis odio nibh condimentum aliquet commodo."
+      <div
+        className="bg-[#1f1f2e] rounded-xl p-8 max-w-3xl mx-auto shadow-2xl"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <p className="text-lg text-white italic mb-6">
+          "Sed sit varius neque turpis enim ut metus consectetur. Tortor urna
+          risus phasellus nec. In facilisis pulvinar sagittis odio nibh
+          condimentum aliquet commodo."
         </p>
 
         <div className="flex items-center justify-between mt-6">
           <div className="flex items-center">
             <img
-              src="https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="https://i.ibb.co.com/hR4vq0hP/Base.png"
               alt="Alex Larkins"
               className="w-12 h-12 rounded-full mr-4"
             />
             <div>
-              <p className="font-semibold text-gray-900">Alex Larkins</p>
-              <p className="text-sm text-gray-500">Art Director at Airbnb</p>
+              <p className="font-semibold text-white">Alex Larkins</p>
+              <p className="text-sm text-gray-300">Art Director at Airbnb</p>
             </div>
           </div>
 
-          <div className="text-gray-400 text-sm font-bold uppercase tracking-wide">
+          <div className="text-gray-300 text-sm font-bold uppercase tracking-wide">
             Airbnb
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
