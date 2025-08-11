@@ -8,6 +8,7 @@ import StackPower from '../StackPower/StackPower';
 import FAQSection from '../FAQSection/FAQSection';
 import ClientStory from '../ClientStory/ClientStory';
 import ContactUs from '../ContactUs/ContactUs';
+import MobileBannerContent from './MobileBannerContent';
 
 
 
@@ -25,6 +26,7 @@ const Home = () => {
             <FAQSection></FAQSection>
             <ClientStory></ClientStory>
             <ContactUs></ContactUs>
+             
 
         </div>
     );

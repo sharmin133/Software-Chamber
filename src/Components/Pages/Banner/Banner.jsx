@@ -4,6 +4,7 @@ import { LuCircleArrowOutUpRight } from "react-icons/lu";
 import { PiStarThin } from "react-icons/pi";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import MobileBannerContent from "../Home/MobileBannerContent";
 
 const Banner = () => {
   useEffect(() => {
@@ -71,7 +72,8 @@ const Banner = () => {
             />
           </span>
         </span>
-        Team
+
+        {' '}Team
         <br />
         <span className="text-white">in The Cloud</span>
       </h1>
@@ -89,6 +91,7 @@ const Banner = () => {
       </div>
 
       <BannerContent />
+      <MobileBannerContent></MobileBannerContent>
     </div>
   );
 };

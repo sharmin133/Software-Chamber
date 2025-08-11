@@ -15,12 +15,12 @@ const ContactUs = () => {
         className="text-center mb-12 md:mb-16"
         data-aos="fade-up"
       >
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+        <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
           Let’s talk about your next project.
           <br />
           <span className="text-gray-500"> We’re here to help.</span>
         </h1>
-        <p className="mt-4 text-black text-2xl max-w-3xl mx-auto">
+        <p className="mt-4 text-black md:text-2xl max-w-3xl mx-auto">
           Deliver personalized experiences to your customers with AI-powered
           recommendation engines and dynamic content generation.
         </p>
@@ -63,7 +63,7 @@ const ContactUs = () => {
 
             {/* Phone Number */}
             <div className="flex space-x-2">
-              <select className="p-4 bg-gray-100 text-black font-semibold rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500">
+              <select className="md:p-4 bg-gray-100 text-black font-semibold rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500">
                 <option>+1</option>
                 <option>+880</option>
                 <option>+44</option>
@@ -71,7 +71,7 @@ const ContactUs = () => {
               <input
                 type="tel"
                 placeholder="Phone"
-                className="flex-grow p-4 bg-gray-100 text-black font-semibold rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="flex-grow md:p-4 py-4 bg-gray-100 text-black font-semibold rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
             </div>
 

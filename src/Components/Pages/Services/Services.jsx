@@ -38,12 +38,12 @@ const Services = () => {
         className="flex justify-between items-center mb-12 md:mb-20"
         data-aos="fade-down"
       >
-        <h2 className="text-4xl md:text-6xl text-black font-bold">
+        <h2 className="text-3xl md:text-6xl text-black font-bold">
           Services
-          <span className="text-green-400 ml-4 text-5xl">✨</span>
+          <span className="text-green-400 md:ml-4 ml-1 md:text-5xl">✨</span>
         </h2>
         <div className="flex items-center gap-2">
-          <div className="text-black font-semibold">All Services</div>
+          <div className="text-black font-normal  md:font-semibold">All Services</div>
           <div className="w-8 h-8 bg-gray-300 text-black rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-400 transition">
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path

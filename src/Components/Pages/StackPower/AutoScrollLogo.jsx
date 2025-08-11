@@ -80,7 +80,7 @@ const AutoScrollLogo = () => {
         }
       `}</style>
 
-      <div className="scroll-container">
+      <div className="scroll-container bg-gradient-to-t from-[#22C1AD]/20 to-[#1E1E1E] ">
         <div className="scroll-track">
           {duplicatedLogos.map(({ id, name, img }, idx) => (
             <div

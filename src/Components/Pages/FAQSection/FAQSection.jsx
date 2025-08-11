@@ -17,9 +17,9 @@ const FAQSection = () => {
       </h2>
 
       <div className="flex justify-between items-center mb-8 ">
-        <h2 className="text-4xl md:text-6xl text-black font-bold">FAQ</h2>
+        <h2 className="text-3xl md:text-6xl text-black font-bold">FAQ</h2>
         <div className="flex items-center justify-baseline gap-2 ">
-          <div className="text-black font-semibold ">All FAQ</div>
+          <div className="text-black font-normal md:font-semibold ">All FAQ</div>
 
           <div className="w-8 h-8 bg-gray-300 text-black rounded-full flex items-center justify-center cursor-pointer">
             <svg
@@ -46,10 +46,10 @@ const FAQSection = () => {
           data-aos-delay="100"
         >
           <input type="checkbox" className="peer" />
-          <div className="collapse-title text-2xl font-medium peer-checked:text-green-600">
+          <div className="collapse-title text-xl md:text-2xl font-medium peer-checked:text-green-600">
             What software development services does your company offer?
           </div>
-          <div className="collapse-content text-xl">
+          <div className="collapse-content md:text-xl">
             <p>
               We provide end-to-end design and development services tailored to
               your business needs, including branding, UI/UX design, web and
@@ -57,7 +57,7 @@ const FAQSection = () => {
             </p>
           </div>
         </div>
-
+<hr className="border-t-1  border-gray-400 my-4" />
         {/* FAQ Item 2 */}
         <div
           className="collapse collapse-arrow rounded-md bg-white text-black"
@@ -65,10 +65,10 @@ const FAQSection = () => {
           data-aos-delay="200"
         >
           <input type="checkbox" className="peer" />
-          <div className="collapse-title text-2xl font-medium peer-checked:text-green-600">
+          <div className="collapse-title text-xl md:text-2xl font-medium peer-checked:text-green-600">
             What industries do you specialize in?
           </div>
-          <div className="collapse-content text-xl">
+          <div className="collapse-content md:text-xl">
             <p>
               We provide end-to-end design and development services tailored to
               your business needs, including branding, UI/UX design, web and
@@ -76,7 +76,7 @@ const FAQSection = () => {
             </p>
           </div>
         </div>
-
+<hr className="border-t-1  border-gray-400 my-4" />
         {/* FAQ Item 3 */}
         <div
           className="collapse collapse-arrow rounded-md bg-white text-black"
@@ -84,14 +84,14 @@ const FAQSection = () => {
           data-aos-delay="300"
         >
           <input type="checkbox" className="peer" />
-          <div className="collapse-title text-2xl font-medium peer-checked:text-green-600">
+          <div className="collapse-title text-xl md:text-2xl font-medium peer-checked:text-green-600">
             What sets your company apart from the competition?
           </div>
-          <div className="collapse-content text-xl">
+          <div className="collapse-content md:text-xl">
             <p>Project timelines vary depending on complexity but typically range from 2 weeks to 3 months.</p>
           </div>
         </div>
-
+<hr className="border-t-1  border-gray-400 my-4" />
         {/* FAQ Item 4 */}
         <div
           className="collapse collapse-arrow rounded-md bg-white text-black"
@@ -99,14 +99,14 @@ const FAQSection = () => {
           data-aos-delay="400"
         >
           <input type="checkbox" className="peer" />
-          <div className="collapse-title text-2xl font-medium peer-checked:text-green-600">
+          <div className="collapse-title text-xl md:text-2xl font-medium peer-checked:text-green-600">
             Is my project idea and information kept confidential?
           </div>
-          <div className="collapse-content text-xl">
+          <div className="collapse-content md:text-xl">
             <p>Yes, we offer maintenance and support services to ensure your product runs smoothly after launch.</p>
           </div>
         </div>
-
+<hr className="border-t-1  border-gray-400 my-4" />
         {/* FAQ Item 5 */}
         <div
           className="collapse collapse-arrow rounded-md bg-white text-black"
@@ -114,10 +114,10 @@ const FAQSection = () => {
           data-aos-delay="500"
         >
           <input type="checkbox" className="peer" />
-          <div className="collapse-title text-2xl font-medium peer-checked:text-green-600">
+          <div className="collapse-title text-xl md:text-2xl font-medium peer-checked:text-green-600">
             What is your pricing model?
           </div>
-          <div className="collapse-content text-xl">
+          <div className="collapse-content md:text-xl">
             <p>
               We offer both fixed-price and hourly models depending on project
               scope. We ensure transparency and flexibility in our pricing.

@@ -18,89 +18,87 @@ const StackPower = () => {
       className="bg-gradient-to-t from-[#22C1AD]/10 to-[#1E1E1E] py-16 md:py-24"
       data-aos="fade-up"
     >
-      <div className="px-12 pb-20 flex justify-between items-start gap-16">
-        {/* Left Title */}
-        <h2 className="text-3xl md:text-5xl font-bold text-center leading-snug md:w-1/2">
-          Our Stack Powers of the{" "}
-          <span className="text-gray-400">World’s</span> Most{" "}
-          <span className="text-gray-400">Beloved Companies</span>
-        </h2>
+     <div className="px-6 pb-20 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-16">
+  {/* Left Title */}
+  <h2 className="text-2xl md:text-5xl font-bold text-center md:text-left leading-snug w-full md:w-1/2">
+    Our Stack Powers of the{" "}
+    <span className="text-gray-400">World’s</span> Most{" "}
+    <span className="text-gray-400">Beloved Companies</span>
+  </h2>
 
-        {/* Right Buttons Grid */}
-        <div className="grid grid-cols-2 gap-6 md:w-1/2">
-          {/* First row */}
-          <button
-            className="flex items-end gap-3 rounded-full font-medium px-5 py-3"
-            style={{ backgroundColor: buttonColor, color: "white" }}
-          >
-            <FaSpotify
-              size={20}
-              color="#1DB954"
-              className="bg-white w-8 h-8 rounded-full"
-            />{" "}
-            Spotify
-          </button>
-          <button
-            className="flex items-center gap-3 rounded-full font-medium px-5 py-3"
-            style={{ backgroundColor: buttonColor, color: "white" }}
-          >
-            <FaDropbox
-              size={20}
-              color="#0061FF"
-              className="bg-white w-8 h-8 rounded-full"
-            />{" "}
-            Dropbox
-          </button>
+  {/* Right Buttons Grid */}
+  <div className="md:gap-6 w-full md:w-1/2">
+  <div className="flex flex-wrap justify-center gap-4">
+    {/* First row */}
+    <button
+      className="flex items-center gap-3 rounded-full font-medium px-5 py-3 flex-1 min-w-[45%] max-w-[45%]"
+      style={{ backgroundColor: buttonColor, color: "white" }}
+    >
+      <FaSpotify
+        size={20}
+        color="#1DB954"
+        className="bg-white w-8 h-8 rounded-full"
+      />
+      Spotify
+    </button>
 
-          {/* Second row */}
-          <button
-            className="flex items-start gap-3 rounded-full font-medium px-5 py-3"
-            style={{
-              backgroundColor: buttonColor,
-              color: "white",
-              marginLeft: "10%",
-            }}
-          >
-            <FaSlack
-              size={20}
-              color="#4A154B"
-              className="bg-white w-8 h-8 rounded-full"
-            />{" "}
-            Slack
-          </button>
-          <button
-            className="flex items-center gap-3 rounded-full font-medium px-5 py-3"
-            style={{ backgroundColor: buttonColor, color: "white" }}
-          >
-            <FaAmazon
-              size={20}
-              color="#FF9900"
-              className="bg-white w-8 h-8 rounded-full"
-            />{" "}
-            Flipkart
-          </button>
+    <button
+      className="flex items-center gap-3 rounded-full font-medium px-5 py-3 flex-1 min-w-[45%] max-w-[45%]"
+      style={{ backgroundColor: buttonColor, color: "white" }}
+    >
+      <FaDropbox
+        size={20}
+        color="#0061FF"
+        className="bg-white w-8 h-8 rounded-full"
+      />
+      Dropbox
+    </button>
 
-          {/* Third row - single button */}
-          <button
-            className="flex items-center gap-3 rounded-full font-medium px-5 py-3 justify-center col-span-2 md:col-span-1 md:justify-start"
-            style={{
-              backgroundColor: buttonColor,
-              color: "white",
-              marginLeft: "20%",
-            }}
-          >
-            <FaUserTie
-              size={20}
-              color="#E91E63"
-              className="bg-white w-8 h-8 rounded-full"
-            />{" "}
-            TalentQl
-          </button>
-        </div>
-      </div>
+    {/* Second row */}
+    <button
+      className="flex items-center gap-3 rounded-full font-medium px-5 py-3 flex-1 min-w-[45%] max-w-[45%]"
+      style={{ backgroundColor: buttonColor, color: "white" }}
+    >
+      <FaSlack
+        size={20}
+        color="#4A154B"
+        className="bg-white w-8 h-8 rounded-full"
+      />
+      Slack
+    </button>
+
+    <button
+      className="flex items-center gap-3 rounded-full font-medium px-5 py-3 flex-1 min-w-[45%] max-w-[45%]"
+      style={{ backgroundColor: buttonColor, color: "white" }}
+    >
+      <FaAmazon
+        size={20}
+        color="#FF9900"
+        className="bg-white w-8 h-8 rounded-full"
+      />
+      Flipkart
+    </button>
+
+    {/* Third row - center */}
+    <button
+      className="flex items-center gap-3 rounded-full font-medium px-5 py-3 min-w-[45%] justify-center"
+      style={{ backgroundColor: buttonColor, color: "white" }}
+    >
+      <FaUserTie
+        size={20}
+        color="#E91E63"
+        className="bg-white w-8 h-8 rounded-full"
+      />
+      TalentQl
+    </button>
+  </div>
+</div>
+
+</div>
+
 
       <div
-        className="bg-gradient-to-t from-[#1E1E1E] to-[#22C1AD]/30 rounded-xl p-8 max-w-4xl mx-auto shadow-2xl flex flex-col justify-center items-center px-4 py-8"
+        className="bg-gradient-to-t from-[#1E1E1E] to-[#22C1AD]/30 rounded-xl p-8   md:max-w-4xl md:mx-auto mx-4 shadow-2xl flex flex-col justify-center items-center px-4 py-8"
         data-aos="fade-up"
         data-aos-delay="200"
       >

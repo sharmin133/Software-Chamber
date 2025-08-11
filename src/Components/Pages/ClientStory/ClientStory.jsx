@@ -10,7 +10,7 @@ const ClientStory = () => {
 
   return (
     <div
-      className="bg-gradient-to-t from-[#22C1AD]/10 to-[#1E1E1E] py-20 px-6"
+      className="bg-gradient-to-t from-[#22C1AD]/20 to-[#1E1E1E] py-20 px-6"
       data-aos="fade-up"
     >
       <div className="text-center mb-4" data-aos="fade-up" data-aos-delay="100">
@@ -35,13 +35,13 @@ const ClientStory = () => {
         </h2>
       </div>
 
-      {/* Testimonial Card */}
+
       <div
-        className="bg-[#1f1f2e] rounded-xl p-8 max-w-3xl mx-auto shadow-2xl"
+        className="bg-gradient-to-t from-[#22C1AD]/20 to-[#1E1E1E] rounded-xl p-8 max-w-3xl mx-auto shadow-2xl"
         data-aos="fade-up"
         data-aos-delay="300"
       >
-        <p className="text-lg text-white italic mb-6">
+        <p className="md:text-lg text-white italic mb-6">
           "Sed sit varius neque turpis enim ut metus consectetur. Tortor urna
           risus phasellus nec. In facilisis pulvinar sagittis odio nibh
           condimentum aliquet commodo."

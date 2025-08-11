@@ -11,13 +11,13 @@ const Footer = () => {
   return (
     <div className="bg-gradient-to-t from-[#22C1AD]/10 to-[#1E1E1E]">
       <h2
-        className="text-6xl p-5 md:pb-20 font-bold"
+        className=" text-3xl md:text-6xl p-5 md:pb-10 font-bold"
         data-aos="fade-up"
       >
         LET'S TALK
       </h2>
       <div
-        className="grid grid-cols-3 p-6"
+        className="grid md:grid-cols-3 p-6"
         data-aos="fade-up"
         data-aos-delay="100"
       >
@@ -27,7 +27,15 @@ const Footer = () => {
             Where passion meets performance on the court like never before.
           </p>
 
-          <div>
+ <div className="md:hidden">
+          <img
+            className="w-64 h-64 object-cover rounded-2xl"
+            src="/AllPicture/Rectangle 22852.png"
+            alt="Footer Visual"
+          />
+        </div>
+          <div className="py-4">
+
             <h2 className="text-2xl text-white mb-4">Social media</h2>
 
             <div className="grid grid-cols-3 gap-4">
@@ -55,7 +63,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-10 text-gray-300">
           <div>
-            <h2 className="text-2xl text-white mb-2">ADDRESS</h2>
+            <h2 className="md:text-2xl text-white mb-2">ADDRESS</h2>
             <p>1901 thornridge Cir, Shiloh, Hawaii 81063</p>
           </div>
 
@@ -70,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div>
+        <div className="hidden md:block">
           <img
             className="w-64 h-64 object-cover rounded-2xl"
             src="/AllPicture/Rectangle 22852.png"
@@ -80,7 +88,7 @@ const Footer = () => {
       </div>
 
       <hr
-        className="border-t-2 border-dashed border-gray-400 my-10 px-12"
+        className="border-t-2 border-dashed border-gray-400 md:my-10 md:px-12"
         data-aos="fade-up"
         data-aos-delay="200"
       />

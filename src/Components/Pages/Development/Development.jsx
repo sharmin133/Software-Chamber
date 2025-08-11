@@ -58,7 +58,7 @@ const Development = () => {
 
       <div className="mt-12" data-aos="fade-up" data-aos-delay="400">
         <img
-          className="max-w-4xl"
+          className="md:w-4xl w-72"
           src="https://i.ibb.co.com/bj6ymWcr/Group-1000003451.png"
           alt=""
         />
