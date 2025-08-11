@@ -36,9 +36,9 @@ const Footer = () => {
         </div>
           <div className="py-4">
 
-            <h2 className="text-2xl text-white mb-4">Social media</h2>
+            <h2 className="md:text-2xl text-xl text-white mb-4">Social Media</h2>
 
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-4  md:text-lg text-sm">
               {[
                 "Instagram",
                 "Twitter",
@@ -63,18 +63,19 @@ const Footer = () => {
 
         <div className="flex flex-col gap-10 text-gray-300">
           <div>
-            <h2 className="md:text-2xl text-white mb-2">ADDRESS</h2>
-            <p>1901 thornridge Cir, Shiloh, Hawaii 81063</p>
+            <h2 className="md:text-2xl text-xl text-white mb-2"> ADDRESS</h2>
+            <p className="md:text-lg text-sm"> 1901 thornridge Cir, Shiloh, Hawaii 81063</p>
+          </div>
+          
+
+          <div>
+            <h2 className="md:text-2xl text-xl text-white mb-2">PHONE</h2>
+            <p className="md:text-lg text-sm">[+1] 872-298-3989</p>
           </div>
 
           <div>
-            <h2 className="text-2xl text-white mb-2">PHONE</h2>
-            <p>[+1] 872-298-3989</p>
-          </div>
-
-          <div>
-            <h2 className="text-2xl text-white mb-2">EMAIL</h2>
-            <p>hello@tranzit.com</p>
+            <h2 className="md:text-2xl text-xl text-white mb-2">EMAIL</h2>
+            <p className="md:text-lg text-sm">hello@tranzit.com</p>
           </div>
         </div>
 
