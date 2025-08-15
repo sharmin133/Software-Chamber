@@ -12,27 +12,30 @@ const Services = () => {
       title: "Web & Mobile App Development",
       text: "We build responsive, user-centric web and mobile applications tailored to your business goals using the latest technologies.",
       bg: "bg-gray-100 text-black",
+      hoverBg: "hover:bg-teal-500",
       arrowColor: "text-black",
       animation: "fade-right",
     },
     {
       title: "Application Software Services",
       text: "We offer comprehensive application software services, from planning to deployment, ensuring high performance and usability.",
-      bg: "bg-teal-500 text-white",
-      arrowColor: "text-teal-500",
+      bg: "bg-gray-100 text-black",
+      hoverBg: "hover:bg-teal-500",
+      arrowColor: "text-black",
       animation: "zoom-in",
     },
     {
       title: "Software Coding & Optimization",
       text: "Our team improves existing software with clean, optimized code to enhance speed, scalability, and performance.",
       bg: "bg-gray-100 text-black",
+      hoverBg: "hover:bg-teal-500",
       arrowColor: "text-black",
       animation: "fade-left",
     },
   ];
 
   return (
-    <div className="text-white p-8 md:p-16 bg-white">
+    <div className="p-8 md:p-16 bg-white">
       {/* Header Section */}
       <div
         className="flex justify-between items-center mb-12 md:mb-20"
@@ -43,7 +46,9 @@ const Services = () => {
           <span className="text-green-400 md:ml-4 ml-1 md:text-5xl">✨</span>
         </h2>
         <div className="flex items-center gap-2">
-          <div className="text-black font-normal  md:font-semibold">All Services</div>
+          <div className="text-black font-normal md:font-semibold">
+            All Services
+          </div>
           <div className="w-8 h-8 bg-gray-300 text-black rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-400 transition">
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
               <path
@@ -62,18 +67,12 @@ const Services = () => {
           <div
             key={i}
             data-aos={card.animation}
-            className={`${card.bg} p-8 md:p-12 rounded-3xl w-full md:w-1/3 transition-transform duration-300 hover:scale-105`}
+            className={`${card.bg} ${card.hoverBg} p-8 md:p-12 rounded-3xl w-full md:w-1/3 transition-all duration-300 hover:scale-105`}
           >
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               {card.title}
             </h3>
-            <p
-              className={
-                card.bg.includes("teal") ? "text-white" : "text-gray-700"
-              }
-            >
-              {card.text}
-            </p>
+            <p className="text-black">{card.text}</p>
             <div
               className={`w-12 h-12 bg-white ${card.arrowColor} rounded-full flex items-center justify-center cursor-pointer mt-8`}
             >
